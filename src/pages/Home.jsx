@@ -1,6 +1,7 @@
 // import du package axios
 import axios from "axios";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const [data, setData] = useState();
@@ -25,26 +26,36 @@ const Home = () => {
   return isLoading ? (
     <span>En cours de chargement</span>
   ) : (
-    <main className="container innerMain">
-      <div className="divOffers">
-        {data.offers.map((offer) => {
-          return (
-            <article key={offer._id}>
-              <div className="div-user">
-                {"avatar" in offer.owner.account && (
-                  <img
-                    className="avatar"
-                    src={offer.owner.account.avatar.url}
-                    alt=""
-                  />
-                )}
-                <div>{offer.owner.account.username}</div>
-              </div>
-              <img src={offer.product_image.url} alt="" />
-              <div>{offer.product_price} €</div>
-            </article>
-          );
-        })}
+    <main>
+      <div className="container innerMain">
+        <div className="divOffers">
+          {data.offers.map((offer) => {
+            return (
+              <Link key={offer._id} to={`/offer/${offer._id}`}>
+                <article>
+                  <div className="div-user">
+                    {"avatar" in offer.owner.account && (
+                      <img
+                        className="avatar"
+                        src={offer.owner.account.avatar.url}
+                        alt=""
+                      />
+                    )}
+                    <div>{offer.owner.account.username}</div>
+                  </div>
+                  <img src={offer.product_image.url} alt="" />
+                  <div className="product-price">{offer.product_price} €</div>
+                  <div className="product-detail">
+                    {offer.product_details[1].TAILLE}
+                  </div>
+                  <div className="product-detail">
+                    {offer.product_details[2].ÉTAT}
+                  </div>
+                </article>
+              </Link>
+            );
+          })}
+        </div>
       </div>
     </main>
   );

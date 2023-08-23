@@ -1,0 +1,91 @@
+{
+  "_id": "64b51538528a43ef1c118aa5",
+  "product_name": "Vestido",
+  "product_description": "Vestido camisero estampado, tegido fluido satinado, talla S.",
+  "product_price": 25,
+  "product_details": [
+    { "MARQUE": "STRADIVARIUS" },
+    { "ÉTAT": "NEUF AVEC ÉTIQUETTE" },
+    { "COULEUR": "MULTICOLORE" },
+    { "EMPLACEMENT": " ANDALUCÍA, ESPAÑA" }
+  ],
+  "product_pictures": [
+    {
+      "asset_id": "9d6af16c3758d51abbc6bb9ee2c09d99",
+      "public_id": "api/vinted-v2/offers/64b51538528a43ef1c118aa5/sgbyqsnwcm9nhgndgexy",
+      "version": 1689589049,
+      "version_id": "b91252ac5db492059fd4760b0411fbb9",
+      "signature": "2096799dd83a3f63018d95b36e0ba841e397e831",
+      "width": 321,
+      "height": 800,
+      "format": "jpg",
+      "resource_type": "image",
+      "created_at": "2023-07-17T10:17:29Z",
+      "tags": [],
+      "bytes": 82936,
+      "type": "upload",
+      "etag": "b4cd79f0e0466d2b5e1da656e07763a1",
+      "placeholder": false,
+      "url": "http://res.cloudinary.com/lereacteur/image/upload/v1689589049/api/vinted-v2/offers/64b51538528a43ef1c118aa5/sgbyqsnwcm9nhgndgexy.jpg",
+      "secure_url": "https://res.cloudinary.com/lereacteur/image/upload/v1689589049/api/vinted-v2/offers/64b51538528a43ef1c118aa5/sgbyqsnwcm9nhgndgexy.jpg",
+      "folder": "api/vinted-v2/offers/64b51538528a43ef1c118aa5",
+      "access_mode": "public",
+      "original_filename": "1644244740_xwwygk",
+      "api_key": "361833749344571"
+    }
+  ],
+  "owner": {
+    "account": {
+      "username": "Conner74",
+      "avatar": {
+        "asset_id": "434722c7ebec98281fe731d7d3d34ada",
+        "public_id": "api/vinted-v2/users/64b51530528a43ef1c118a7f/avatar",
+        "version": 1689589041,
+        "version_id": "2bc96c019137bb3a95993d8bc2240bd4",
+        "signature": "7cacfbc3a93627f44353d33a478f9a38275bd43b",
+        "width": 420,
+        "height": 420,
+        "format": "png",
+        "resource_type": "image",
+        "created_at": "2023-07-17T10:17:21Z",
+        "tags": [],
+        "bytes": 1559,
+        "type": "upload",
+        "etag": "65d8f3385c0f3cda3104e9f8f2b459b6",
+        "placeholder": false,
+        "url": "http://res.cloudinary.com/lereacteur/image/upload/v1689589041/api/vinted-v2/users/64b51530528a43ef1c118a7f/avatar.png",
+        "secure_url": "https://res.cloudinary.com/lereacteur/image/upload/v1689589041/api/vinted-v2/users/64b51530528a43ef1c118a7f/avatar.png",
+        "folder": "api/vinted-v2/users/64b51530528a43ef1c118a7f",
+        "access_mode": "public",
+        "original_filename": "87003261",
+        "api_key": "361833749344571"
+      }
+    },
+    "_id": "64b51530528a43ef1c118a7f"
+  },
+  "product_image": {
+    "asset_id": "f9d93eec703bce18e3ae0f21a0849963",
+    "public_id": "api/vinted-v2/offers/64b51538528a43ef1c118aa5/preview",
+    "version": 1689589048,
+    "version_id": "83282afcc2508886d39c9456bf128e45",
+    "signature": "abbbd0c4f1fd2162285e6a0bdad258c26591fb69",
+    "width": 321,
+    "height": 800,
+    "format": "jpg",
+    "resource_type": "image",
+    "created_at": "2023-07-17T10:17:28Z",
+    "tags": [],
+    "bytes": 82936,
+    "type": "upload",
+    "etag": "b4cd79f0e0466d2b5e1da656e07763a1",
+    "placeholder": false,
+    "url": "http://res.cloudinary.com/lereacteur/image/upload/v1689589048/api/vinted-v2/offers/64b51538528a43ef1c118aa5/preview.jpg",
+    "secure_url": "https://res.cloudinary.com/lereacteur/image/upload/v1689589048/api/vinted-v2/offers/64b51538528a43ef1c118aa5/preview.jpg",
+    "folder": "api/vinted-v2/offers/64b51538528a43ef1c118aa5",
+    "access_mode": "public",
+    "original_filename": "1644244740_xwwygk",
+    "api_key": "361833749344571"
+  },
+  "product_date": "2023-07-17T10:17:28.179Z",
+  "__v": 0
+}

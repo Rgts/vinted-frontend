@@ -1,10 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
 
-* {
+body * {
 font-family: 'Poppins',Georgia, 'Times New Roman', Times, serif;
 font-weight: 300;
 }
 
+
+a {
+  text-decoration: none;
+}
 h1 {
   font-size: 30px;
 }
@@ -12,7 +16,7 @@ h1 {
 
 header {
   height: 120px;
-  border-bottom:1px solid red;
+  /* border-bottom:1px solid red; */
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -28,7 +32,7 @@ header img {
 
 .container {
   width: 80vw;
-  margin: 5px auto;
+  margin: 0px auto;
   /* border:1px solid blue; */
 }
 
@@ -56,9 +60,11 @@ header button:last-of-type {
   background-color: #2CB1BA;
 }
 
+
+/* -----------HERO------------------ */
 .hero {
   height: 455px;
-  border: 1px solid yellow;
+  /* border: 1px solid yellow; */
   background-image: url('./assets/images/hero-home.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -93,9 +99,15 @@ header button:last-of-type {
   width: 187px;
 }
 
+/* ----------MAIN --------------------- */
 
+main {
+  background-color: #F2F2F2;
+  /* border:1px solid purple; */
+  padding-bottom: 150px;
+}
 .innerMain {
-margin-top: 50px;
+  padding-top: 50px;
 }
 
 .divOffers {
@@ -104,8 +116,8 @@ margin-top: 50px;
   flex-wrap: wrap;
   gap:20px;
   justify-content: space-between;
-  align-items: center;
-  border:1px solid red;
+  align-items: flex-start;
+  /* border:1px solid red; */
 }
 
 .divOffers article {
@@ -113,22 +125,22 @@ margin-top: 50px;
   display: flex;
   flex-direction: column;
   gap:10px;
-  justify-content: flex-start;
-  align-items: center;
-  border:1px solid green;
+  justify-content: flex-end;
+  align-items: flex-start;
+  /* border:3px solid green; */
 }
 
 .divOffers article>img {
-width:234px;
-height: 340px;
-object-fit: cover;
+  width:234px;
+  height: 340px;
+  object-fit: cover;
 }
 
 .divOffers article .avatar {
-width:1em;
-height: 1em;
-object-fit: cover;
-border-radius: 50%;
+  width:1em;
+  height: 1em;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .divOffers article .div-user {
@@ -137,4 +149,123 @@ border-radius: 50%;
   justify-content: center;
   align-items: center;
   gap:10px;
+  text-transform: lowercase;
+  line-height: 6px;
+  font-size: 14px;
+  color: black;
+}
+
+.divOffers article .product-detail {
+  text-transform: lowercase;
+  line-height: 6px;
+  font-size: 12px;
+  color: #9E9E9E;
+}
+
+.divOffers article .product-price {
+  text-transform: lowercase;
+  line-height: 6px;
+  font-size: 14px;
+  color: black;
+}
+
+/* ----------OFFER --------------------- */
+.div-article {
+  padding-top: 100px;
+  height: 600px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.div-article-left {
+    border: 1px solid lightgray;
+
+  width: 40%;
+  height: 100%;
+  /* border: 1px solid blue; */
+  border-radius: 8px;
+}
+
+.div-article-left img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  /* border: 1px solid black; */
+  border-radius: 8px;
+}
+
+
+
+.div-article-right {
+  width: 33%;
+  border: 1px solid lightgray;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1em;
+  padding: 25px 20px;
+    border-radius: 8px;
+
+}
+
+.product-detail {
+  width: 100%;
+  /* border: 1px solid orange; */
+  display: flex;
+  flex-direction: row;
+  gap:20px;
+  justify-content: flex-start;
+  text-transform: lowercase;
+  align-items: flex-start;
+}
+
+.div-article-right .product-price{
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.div-article-right .product-name{
+  margin-top: 40px;
+  font-size: 24px;
+    margin-bottom: 10px;
+
+}
+
+.div-article-right .product-description{
+  font-size: 17px;
+}
+.product-detail > span:nth-of-type(odd) {
+  width: 50%;
+  /* border: 1px solid green; */
+  color: #999999;
+    text-transform: uppercase;
+
+}
+.product-detail > span:nth-of-type(even) {
+  width: 50%;
+  /* border: 1px solid red; */
+    color: black;
+      text-transform: uppercase;
+}
+.product-detail >span::first-letter {
+  /* color: red; */
+  text-transform: uppercase;
+}
+
+.gray-line {
+              margin:40px 0px;
+              color: #F2F2F2;
+              height: 0.5;
+              width: 100%;
+}
+
+.div-article-right button {
+  color:white;
+  background-color: #2CB1BA;
+  border:1px solid #2CB1BA;
+  border-radius: 5px;
+  height: 45px;
+  width: 100%;
 }

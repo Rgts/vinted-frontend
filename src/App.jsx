@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Home from "./pages/Home";
-import Offers from "./pages/Offers";
+import Offer from "./pages/Offer";
 import Header from './components/Header';
 import Hero from "./components/Hero";
 
@@ -18,7 +18,7 @@ function App() {
 
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/offers" element={<Offers />} />
+          <Route path="/offer/:id" element={<Offer />} />
         </Routes>
       </Router>
     </>
