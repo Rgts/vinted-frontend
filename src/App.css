@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+* {
+font-family: 'Poppins',Georgia, 'Times New Roman', Times, serif;
+font-weight: 300;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+
+header {
+  height: 120px;
+  border-bottom:1px solid red;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+
+header img {
+  height: 37px;
+}
+/* .innerHeader {
+} */
+
+.container {
+  width: 80vw;
+  margin: 5px auto;
+  /* border:1px solid blue; */
+}
+
+.innerHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.containerButtonHeader {
+  display: flex;
+  gap:10px;
+  height: 37px;
+}
+header button {
+  color:#2CB1BA;
+  background-color: transparent;
+  border:1px solid #2CB1BA;
+  border-radius: 5px;
+  height: 100%;
+}
+
+header button:last-of-type {
+  color:white;
+  background-color: #2CB1BA;
+}
+
+.hero {
+  height: 455px;
+  border: 1px solid yellow;
+  background-image: url('./assets/images/hero-home.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: antiquewhite;
+}
+
+.divHero {
+  height: 270px;
+  width: 410px;
+  background: white;
+  border:1px solid #D0D5D8;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap:40px;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 50px;
+}
+
+.divHero button {
+  color:white;
+  background-color: #2CB1BA;
+  border:1px solid #2CB1BA;
+  border-radius: 5px;
+  height: 45px;
+  width: 187px;
+}
+
+
+.innerMain {
+margin-top: 50px;
+}
+
+.divOffers {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap:20px;
+  justify-content: space-between;
+  align-items: center;
+  border:1px solid red;
+}
+
+.divOffers article {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+  justify-content: flex-start;
+  align-items: center;
+  border:1px solid green;
+}
+
+.divOffers article>img {
+width:234px;
+height: 340px;
+object-fit: cover;
+}
+
+.divOffers article .avatar {
+width:1em;
+height: 1em;
+object-fit: cover;
+border-radius: 50%;
+}
+
+.divOffers article .div-user {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap:10px;
+}
