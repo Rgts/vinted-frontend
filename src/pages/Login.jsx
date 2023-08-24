@@ -2,17 +2,11 @@
 import axios from "axios";
 import { useState } from "react";
 import Cookies from "js-cookie";
-import { Link } from "react-router-dom";
-const Signup = () => {
-  const [username, setUsername] = useState("");
+
+const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [errorMessage, setErrorMessage] = useState("");
-
-  const handleNameChange = (event) => {
-    const value = event.target.value;
-    setUsername(value);
-  };
+  const [errorMessage, setErrorMessage] = useState();
 
   const handleEmailChange = (event) => {
     const value = event.target.value;
@@ -29,12 +23,10 @@ const Signup = () => {
     const fetchData = async () => {
       try {
         const response = await axios.post(
-          "https://lereacteur-vinted-api.herokuapp.com/user/signup",
+          "https://lereacteur-vinted-api.herokuapp.com/user/login",
           {
-            username: username,
             email: email,
             password: password,
-            newsletter: false,
           }
         );
         console.log(response.data);
@@ -45,9 +37,7 @@ const Signup = () => {
           setErrorMessage("une erreur est survenue");
         }
       } catch (error) {
-        if (error.response.status === 409) {
-          setErrorMessage("Ce compte existe déjà chez nous !");
-        }
+        setErrorMessage(error.message);
       }
     };
     fetchData();
@@ -55,17 +45,9 @@ const Signup = () => {
 
   return (
     <main className="container white">
-      <div className="innerMain signup-container">
-        <h1>S'inscrire</h1>
-        <form className="signup-form-container" onSubmit={handleSubmit}>
-          <input
-            placeholder="Name"
-            type="text"
-            name="username"
-            value={username}
-            onChange={handleNameChange}
-            required
-          />
+      <div className="innerMain login-container">
+        <h1>Se connecter</h1>
+        <form className="login-form-container" onSubmit={handleSubmit}>
           <input
             placeholder="Email"
             type="email"
@@ -85,12 +67,8 @@ const Signup = () => {
           <div className="error-message">{errorMessage}</div>
           <input className="submit-button" type="submit" value="Submit" />
         </form>
-        <div className="message-under-submit">
-          <Link to="/login">Tu as déjà un compte ? Connecte-toi !</Link>
-        </div>
       </div>
     </main>
   );
 };
-
-export default Signup;
+export default Login;

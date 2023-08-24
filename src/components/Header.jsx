@@ -12,9 +12,9 @@ const Header = () => {
             <img src={logo} alt="logo" />
           </Link>
 
-          <div className="containerButtonHeader">
+          <div className="container-button-header">
             <button onClick={() => navigate("/signup")}>S'inscrire</button>
-            <button>Se connecter</button>
+            <button onClick={() => navigate("/login")}>Se connecter</button>
             <button>Vends tes articles</button>
           </div>
         </div>

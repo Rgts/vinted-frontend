@@ -39,7 +39,7 @@ header img {
   justify-content: space-between;
   align-items: center;
 }
-.containerButtonHeader {
+.container-button-header {
   display: flex;
   gap: 10px;
   height: 37px;
@@ -267,10 +267,72 @@ main {
 }
 
 /* Page signup------ */
-
-.signup-form-container {
+.signup-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
+}
+
+.signup-form-container {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.signup-form-container > * {
+  width: 100%;
+}
+
+.submit-button {
+  color: white;
+  background-color: #2cb1ba;
+  border: 1px solid #2cb1ba;
+  border-radius: 5px;
+  height: 45px;
+  width: 187px;
+}
+
+.white {
+  background-color: white;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+}
+
+/* Page signup------ */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form-container {
+  /* border: 1px solid red; */
+  width: 20%;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.login-form-container > * {
+  width: 100%;
+}
+
+.message-under-submit {
+  margin-top: 20px;
+}
+
+.message-under-submit > * {
+  font-size: 13px;
+  color: #2cb1ba;
 }
