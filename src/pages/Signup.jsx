@@ -3,7 +3,7 @@ import axios from "axios";
 import { useState } from "react";
 import Cookies from "js-cookie";
 import { Link } from "react-router-dom";
-const Signup = () => {
+const Signup = ({ setToken }) => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -41,6 +41,7 @@ const Signup = () => {
         if (response.data.token) {
           // alert("token en cours");
           Cookies.set("token", response.data.token);
+          setToken("token");
         } else {
           setErrorMessage("une erreur est survenue");
         }

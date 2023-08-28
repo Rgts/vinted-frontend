@@ -3,7 +3,7 @@ import axios from "axios";
 import { useState } from "react";
 import Cookies from "js-cookie";
 
-const Login = () => {
+const Login = ({ setToken }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState();
@@ -33,6 +33,7 @@ const Login = () => {
         if (response.data.token) {
           // alert("token en cours");
           Cookies.set("token", response.data.token);
+          setToken(response.data.token);
         } else {
           setErrorMessage("une erreur est survenue");
         }

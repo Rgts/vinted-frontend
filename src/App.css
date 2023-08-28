@@ -296,6 +296,10 @@ main {
   width: 187px;
 }
 
+.submit-button:hover {
+  cursor: pointer;
+}
+
 .white {
   background-color: white;
 }

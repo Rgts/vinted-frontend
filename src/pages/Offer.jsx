@@ -1,15 +1,14 @@
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { useState, useEffect } from "react";
+import { Navigate, useNavigate } from "react-router-dom";
 
-
-const Offer = () => {
+const Publish = () => {
   const [data, setData] = useState();
   const [isLoading, setIsLoading] = useState(true);
 
   const { id } = useParams();
   useEffect(() => {
-
     const fetchData = async () => {
       try {
         const response = await axios.get(
@@ -46,18 +45,12 @@ const Offer = () => {
           })}
           <div className="product-name">{data.product_name}</div>
           <div>{data.product_description}</div>
-          <hr className="gray-line"
-          />
+          <hr className="gray-line" />
           <button>Acheter</button>
         </div>
       </div>
     </main>
   );
+};
 
-
-  }
-
-
-
-
-export default Offer;
+export default Publish;
