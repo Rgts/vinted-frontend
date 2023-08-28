@@ -340,3 +340,26 @@ main {
   font-size: 13px;
   color: #2cb1ba;
 }
+
+/* Page publish------ */
+.publish-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.publish-form-container {
+  /* border: 1px solid red; */
+  width: 40%;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.publish-form-container > * {
+  width: 100%;
+}

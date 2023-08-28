@@ -2,11 +2,13 @@
 import axios from "axios";
 import { useState } from "react";
 import Cookies from "js-cookie";
+import { useNavigate } from "react-router-dom";
 
 const Login = ({ setToken }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState();
+  const navigate = useNavigate();
 
   const handleEmailChange = (event) => {
     const value = event.target.value;
@@ -34,11 +36,12 @@ const Login = ({ setToken }) => {
           // alert("token en cours");
           Cookies.set("token", response.data.token);
           setToken(response.data.token);
+          navigate("/");
         } else {
           setErrorMessage("une erreur est survenue");
         }
       } catch (error) {
-        setErrorMessage(error.message);
+        setErrorMessage(error.response);
       }
     };
     fetchData();

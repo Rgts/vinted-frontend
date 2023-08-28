@@ -2,12 +2,13 @@
 import axios from "axios";
 import { useState } from "react";
 import Cookies from "js-cookie";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 const Signup = ({ setToken }) => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
+  const navigate = useNavigate();
 
   const handleNameChange = (event) => {
     const value = event.target.value;
@@ -42,6 +43,7 @@ const Signup = ({ setToken }) => {
           // alert("token en cours");
           Cookies.set("token", response.data.token);
           setToken("token");
+          navigate("/");
         } else {
           setErrorMessage("une erreur est survenue");
         }

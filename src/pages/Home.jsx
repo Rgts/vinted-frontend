@@ -1,12 +1,13 @@
 // import du package axios
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Home = () => {
   const [data, setData] = useState();
   const [isLoading, setIsLoading] = useState(true);
 
+  const navigate = useNavigate();
   useEffect(() => {
     const fetchData = async () => {
       try {

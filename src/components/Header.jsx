@@ -33,7 +33,9 @@ const Header = ({ token, setToken }) => {
                 <button onClick={() => navigate("/login")}>Se connecter</button>
               </>
             )}
-            <button>Vends tes articles</button>
+            <button onClick={() => navigate("/publish")}>
+              Vends tes articles
+            </button>
           </div>
         </div>
       </header>
