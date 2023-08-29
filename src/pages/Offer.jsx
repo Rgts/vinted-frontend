@@ -1,11 +1,12 @@
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Publish = () => {
   const [data, setData] = useState();
   const [isLoading, setIsLoading] = useState(true);
+  const navigate = useNavigate();
 
   const { id } = useParams();
   useEffect(() => {
@@ -22,7 +23,7 @@ const Publish = () => {
       }
     };
     fetchData();
-  }, []);
+  }, [id]);
   return isLoading ? (
     <span>En cours de chargement</span>
   ) : (
@@ -46,7 +47,15 @@ const Publish = () => {
           <div className="product-name">{data.product_name}</div>
           <div>{data.product_description}</div>
           <hr className="gray-line" />
-          <button>Acheter</button>
+          <button
+            onClick={() =>
+              navigate("/payment", {
+                state: { title: data.product_name, price: data.product_price },
+              })
+            }
+          >
+            Acheter
+          </button>
         </div>
       </div>
     </main>
