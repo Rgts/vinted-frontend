@@ -294,7 +294,7 @@ main {
   border: 1px solid #2cb1ba;
   border-radius: 5px;
   height: 45px;
-  width: 187px;
+  width: 100%;
 }
 
 .submit-button:hover {

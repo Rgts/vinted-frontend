@@ -69,7 +69,7 @@ const Login = ({ setToken }) => {
             required
           />
           <div className="error-message">{errorMessage}</div>
-          <input className="submit-button" type="submit" value="Submit" />
+          <input className="submit-button" type="submit" value="Se connecter" />
         </form>
       </div>
     </main>

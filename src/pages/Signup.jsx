@@ -47,7 +47,7 @@ const Signup = ({ setToken }) => {
           setToken("token");
           navigate("/");
         } else {
-          setErrorMessage("une erreur est survenue");
+          setErrorMessage("Une erreur est survenue.");
         }
       } catch (error) {
         if (error.response.status === 409) {
@@ -104,7 +104,7 @@ const Signup = ({ setToken }) => {
             avoir au moins 18 ans.
           </div>
           <div className="error-message">{errorMessage}</div>
-          <input className="submit-button" type="submit" value="Submit" />
+          <input className="submit-button" type="submit" value="S'inscrire" />
         </form>
         <div className="message-under-submit">
           <Link to="/login">Tu as déjà un compte ? Connecte-toi !</Link>
