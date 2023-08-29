@@ -7,6 +7,8 @@ const Signup = ({ setToken }) => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [newsletter, setNewsletter] = useState(false);
+
   const [errorMessage, setErrorMessage] = useState("");
   const navigate = useNavigate();
 
@@ -35,7 +37,7 @@ const Signup = ({ setToken }) => {
             username: username,
             email: email,
             password: password,
-            newsletter: false,
+            newsletter: newsletter,
           }
         );
         console.log(response.data);
@@ -85,6 +87,22 @@ const Signup = ({ setToken }) => {
             onChange={handlePasswordChange}
             required
           />
+          <span>
+            <input
+              type="checkbox"
+              name="newsletter"
+              id="newsletter"
+              value={newsletter}
+              onChange={() => setNewsletter(!newsletter)}
+            />
+            S'inscrire à notre newsletter.
+          </span>
+
+          <div className="signup-disclaimer">
+            En m'inscrivant je confirme avoir lu et accepté les Termes &
+            Conditions et Politique de Confidentialité de Vinted. Je confirme
+            avoir au moins 18 ans.
+          </div>
           <div className="error-message">{errorMessage}</div>
           <input className="submit-button" type="submit" value="Submit" />
         </form>

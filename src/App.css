@@ -281,6 +281,7 @@ main {
   justify-content: center;
   align-items: center;
   gap: 20px;
+  width: 20vw;
 }
 
 .signup-form-container > * {
@@ -339,6 +340,11 @@ main {
 .message-under-submit > * {
   font-size: 13px;
   color: #2cb1ba;
+}
+
+.signup-disclaimer {
+  font-size: 11px;
+  color: lightgray;
 }
 
 /* Page publish------ */

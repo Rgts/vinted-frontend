@@ -147,15 +147,16 @@ const Publish = ({ token }) => {
             }}
           />
           <label htmlFor="exchange"></label>
-
-          <input
-            type="checkbox"
-            name="exchange"
-            id="exchange"
-            value={acceptExchange}
-            onChange={() => setAcceptExchange(!acceptExchange)}
-          />
-          <span>Je suis intéressé(e) par les échanges</span>
+          <span>
+            <input
+              type="checkbox"
+              name="exchange"
+              id="exchange"
+              value={acceptExchange}
+              onChange={() => setAcceptExchange(!acceptExchange)}
+            />
+            Je suis intéressé(e) par les échanges
+          </span>
           <button type="submit" className="submit-button">
             Ajouter
           </button>
