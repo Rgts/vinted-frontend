@@ -6,8 +6,8 @@ import Home from "./pages/Home";
 import Offer from "./pages/Offer";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
+import Payment from "./pages/Payment";
 import Publish from "./pages/Publish";
-import Payment from "./pages/payment";
 
 import Header from "./components/Header";
 
